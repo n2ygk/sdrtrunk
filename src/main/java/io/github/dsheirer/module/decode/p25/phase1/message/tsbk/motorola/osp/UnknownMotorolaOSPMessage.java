@@ -1,6 +1,7 @@
 /*
- * *****************************************************************************
- * Copyright (C) 2014-2024 Dennis Sheirer
+ * ******************************************************************************
+ * sdrtrunk
+ * Copyright (C) 2014-2019 Dennis Sheirer
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,7 +15,7 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
- * ****************************************************************************
+ * *****************************************************************************
  */
 
 package io.github.dsheirer.module.decode.p25.phase1.message.tsbk.motorola.osp;
@@ -23,6 +24,7 @@ import io.github.dsheirer.bits.CorrectedBinaryMessage;
 import io.github.dsheirer.identifier.Identifier;
 import io.github.dsheirer.module.decode.p25.phase1.P25P1DataUnitID;
 import io.github.dsheirer.module.decode.p25.phase1.message.tsbk.OSPMessage;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -43,7 +45,7 @@ public class UnknownMotorolaOSPMessage extends OSPMessage
     {
         StringBuilder sb = new StringBuilder();
         sb.append(getMessageStub());
-        sb.append(" MOTOROLA **UNRECOGNIZED OSP OPCODE: ").append(getOpcodeNumber());
+        sb.append(" MOTOROLA **UNRECOGNIZED OSP OPCODE**");
         sb.append(" MSG:").append(getMessage().toHexString());
         return sb.toString();
     }
